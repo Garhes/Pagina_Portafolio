@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 1;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#Hover {
+    background-color: rgb(241, 164, 164); /* Cambia este color al que prefieras */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+#Color {
+    background-color: rgb(164, 241, 164); /* Cambia este color al que prefieras */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+#Margin {
+    background-color: rgb(178, 164, 241); /* Cambia este color al que prefieras */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+#Text-Decoration {
+    background-color: rgb(229, 241, 164); /* Cambia este color al que prefieras */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+#Text-Align {
+    background-color: rgb(241, 164, 222); /* Cambia este color al que prefieras */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+}
+
+a {
+    text-decoration: none;
+    color: #928c8c;
+}
+
+p a:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.menu {
+    width: 100%;
+    background-color: #ff0000; /* Color de fondo del menú */
+}
+
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.menu ul li {
+    flex: 1; /* Hace que cada elemento del menú principal ocupe el mismo ancho */
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 0; /* Ajusta el padding para que el menú ocupe toda la altura */
+    text-align: center; /* Centra el texto */
+    background-color: #ff0000;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #ffe600;
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #ff0000;
+    width: 100%; /* Hace que el submenú ocupe el mismo ancho que el elemento del menú principal */
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul li a {
+    padding: 10px 0; /* Ajusta el padding para que el submenú ocupe toda la altura */
+    text-align: center; /* Centra el texto */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.creator-container {
+    display: flex;
+    align-items: center; /* Alinear imagen y texto */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espacio entre imagen y texto */
+}
+
+.creator-photo {
+    width: 40px; /* Tamaño pequeño */
+    height: 40px;
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover; /* Ajuste sin deformar */
+    border: 2px solid white; /* Borde para destacar */
+}
+
+.creator-name {
+    font-size: 14px;
+}
+
+.hover-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.color-text {
+    color: #FF6347; /* Tomate */
+}
+
+.margin-box {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress {
+    height: 20px;
+    background: linear-gradient(45deg, #af4c4c, #030303); /* Verde con degradado */
+    width: 0;
+    transition: width 2s ease-in-out;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de olas */
+.progress::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 200%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: waves 10s infinite linear;
+}
+
+@keyframes waves {
+    0% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+
+.lenguajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.lenguaje {
+    flex: 1 1 calc(33.333% - 20px); /* Tres elementos por fila con espacio entre ellos */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lenguaje-photo {
+    width: 100px; /* Ajusta el ancho según tus necesidades */
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsión */
+    margin-bottom: 10px; /* Espacio entre la imagen y la barra de progreso */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social:hover img {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo semi-transparente */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid black; /* Borde negro */
+    display: flex;
+    align-items: center;
+}
+
+.login-container a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.login-container a:hover {
+    background-color: #4CAF50;
+}
