@@ -1,105 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 1;
+* {
+    margin: 2;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
-#Hover {
-    background-color: rgb(241, 164, 164); /* Cambia este color al que prefieras */
-    padding: 20px;
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-}
-
-#Color {
-    background-color: rgb(164, 241, 164); /* Cambia este color al que prefieras */
-    padding: 20px;
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-}
-
-#Margin {
-    background-color: rgb(178, 164, 241); /* Cambia este color al que prefieras */
-    padding: 20px;
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-}
-
-#Text-Decoration {
-    background-color: rgb(229, 241, 164); /* Cambia este color al que prefieras */
-    padding: 20px;
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-}
-
-#Text-Align {
-    background-color: rgb(241, 164, 222); /* Cambia este color al que prefieras */
-    padding: 20px;
-    border-radius: 10px; /* Opcional: para bordes redondeados */
-}
-
-a {
-    text-decoration: none;
-    color: #928c8c;
-}
-
-p a:hover {
-    color: #ff0000;
-    text-decoration: none;
+body {
+        background: linear-gradient(135deg, hsl(204, 100%, 99%), #000000);
+        color: #333;
+        font-family: Arial, sans-serif;
 }
 
 .menu {
-    width: 100%;
-    background-color: #ff0000; /* Color de fondo del menú */
+    width: 80%; /* Reduce el ancho total del menú */
+    max-width: 900px; /* Limita su tamaño en pantallas grandes */
+    background: linear-gradient(135deg, hsl(0, 0%, 0%), #817e7e);
+    text-align: center;
+    padding: 5px 0; /* Reduce el espacio vertical */
+    margin: auto; /* Centra el menú en la página */
+    border-radius: 10px; /* Opcional, para esquinas redondeadas */
 }
 
 .menu ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
     list-style: none;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .menu ul li {
-    flex: 1; /* Hace que cada elemento del menú principal ocupe el mismo ancho */
     position: relative;
+    padding: 0 10px; /* Reduce el espacio entre elementos */
 }
 
-.menu a {
+.menu ul li a {
     display: block;
-    padding: 10px 0; /* Ajusta el padding para que el menú ocupe toda la altura */
-    text-align: center; /* Centra el texto */
-    background-color: #ff0000;
+    padding: 8px 12px; /* Reduce el tamaño del botón */
+    font-size: 14px; /* Disminuye el tamaño del texto */
     text-decoration: none;
-    color: #000;
-    transition: background-color 0.3s;
+    color: white;
+    background: linear-gradient(135deg, hsl(0, 0%, 0%),  #817e7e);
+    transition: background 0.3s;
+    border-radius: 5px;
 }
 
-.menu a:hover {
+.menu ul li a:hover {
     background-color: #ffe600;
+    color: black;
 }
 
+/* Submenú */
 .menu ul li ul {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    background-color: #ff0000;
-    width: 100%; /* Hace que el submenú ocupe el mismo ancho que el elemento del menú principal */
+    top: 100%;  
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, hsl(0, 0%, 0%),  #817e7e);
+    min-width: 120px; /* Reduce el tamaño del submenú */
+    box-shadow: 2px 2px 5px rgb(255, 255, 255);
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: left;
 }
 
 .menu ul li:hover ul {
     display: block;
 }
 
+/* Estilos del submenú */
 .menu ul li ul li a {
-    padding: 10px 0; /* Ajusta el padding para que el submenú ocupe toda la altura */
-    text-align: center; /* Centra el texto */
+    padding: 6px 10px; /* Reduce el tamaño del submenú */
+    font-size: 12px; /* Reduce el tamaño del texto en el submenú */
+    white-space: nowrap;
+}
+
+.burger-nav {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: linear-gradient(135deg, hsl(0, 0%, 0%),  #817e7e);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.burger-nav.show {
+    display: block; /* Se muestra cuando tiene la clase .show */
+}
+
+.burger-nav ol {
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+}
+
+.burger-nav ol a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
 }
 
 footer {
-    background-color: black;
+    background: linear-gradient(135deg, hsl(0, 0%, 0%),  #817e7e);
     color: white;
     text-align: center;
     padding: 10px;
@@ -272,4 +280,147 @@ footer {
 
 .login-container a:hover {
     background-color: #4CAF50;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinear imagen y texto */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espacio entre imagen y texto */
+}
+
+.photo {
+    width: 8%; /* Tamaño pequeño */
+    border-radius: 100px; /* Imagen circular */
+    object-fit: cover; /* Ajuste sin deformar */
+    border: 2px solid rgb(0, 0, 0); /* Borde para destacar */
+    margin-top: 20px; /* Ajusta el valor según lo que necesites */
+    
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item.left {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.timeline-item.right {
+    flex-direction: row;
+    text-align: right;
+}
+
+.timeline-icon {
+    background: #ff4757;
+    color: white;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.timeline-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.timeline-content p {
+    color: #666;
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    resize: none;
+}
+
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.proyecto {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.proyecto h3 {
+    margin: 15px 0 10px;
+}
+
+.proyecto p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+
+.creator-container {
+    display: flex;
+    align-items: center; /* Alinear imagen y texto */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espacio entre imagen y texto */
+}
+
+.creator-photo {
+    width: 40px; /* Tamaño pequeño */
+    height: 40px;
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover; /* Ajuste sin deformar */
+    border: 2px solid white; /* Borde para destacar */
 }

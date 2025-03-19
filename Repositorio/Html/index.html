@@ -10,26 +10,25 @@
     <header>
         <div class="header-container">
             <div class="socials">
-                <a href="" class="social"><img src="../Img/s1.jpg" alt=""></a>
-                <a href="" class="social"><img src="../Img/s2.jpg" alt=""></a>
-                <a href="" class="social"><img src="../Img/s3.jpg" alt=""></a>
-                <a href="" class="social"><img src="../Img/s4.jpg" alt=""></a>
+                <a href="https://github.com/Garhes" class="social"><img src="../Img/s1.jpg" alt=""></a>
+                <a href="https://www.linkedin.com/in/johan-garc%C3%ADa-932135272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social"><img src="../Img/s2.jpg" alt=""></a>
+            </div> 
+            <h1><center>Garhes</center></h1>
+            <div class="menu-icon">
+                ☰
             </div>
-            <h1>Mi Portafolio</h1>
-            <nav class="login-container">
-                <ul>
-                    <li><a href="../Html/login.html">Login</a></li>
-                </ul>
-            </nav>
+            <ul id="burger" class="burger-nav">
+                <ol><a href="../Html/login.html">Login</a></ol>
+                <ol><a href="../Html/form.html">Contacto</a></ol>
+            </ul>
         </div>
     </header>
+    <br>
     <nav class="menu">
         <ul>
-            <li><a href="#">Redes Sociales</a>
+            <li><a href="#">Mi Hoja de vida</a>
                 <ul>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="https://github.com/Garhes">Github</a></li>
-                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Descarga Mi HV</a></li>
                 </ul>
             </li>
             <li><a href="#">Repositorios</a>
@@ -37,25 +36,36 @@
                     <li><a href="https://github.com/Garhes">Github</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contactame</a>
+            <li><a href="#">Seciones</a>
                 <ul>
-                    <li><a href="./form.html">Formulario</a></li>
-                    <li><a href="">Telefono</a></li>
+                    <li><a href="#Hoja de vida">Hoja de vida</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Cursos">Cursos</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
-    <br>
-    <section id="contenido">
-        <h2>Quien Soy</h2>
-        <div class="yo">
-            <img src="../Img/yo.jpg" alt="Johan Garcia" class="yo-photo">
-            <p>Mi nombre es Johan Garcia, soy un estudiante de la Universidad de Ecci, actualmente estoy cursando el 4to semestre de 
-                Ingenieria de Sistemas, me gusta mucho la programacion y el desarrollo web, me gusta aprender cosas nuevas y siempre estoy en 
-                constante aprendizaje.
-            </p>
+    <hr>
+    <section id="hoja-de-vida" class="timeline">
+        <div class="timeline-item left">
+            <div class="timeline-icon">🎨</div>
+            <div class="timeline-content">
+                <h3>Hobbies</h3>
+                <p>Me gusta diseñar, programar y aprender nuevas tecnologías.</p>
+            </div>
         </div>
-        <h2>Programas mas usados</h2>
+        <div class="timeline-item right">
+            <div class="timeline-icon">🎓</div>
+            <div class="timeline-content">
+                <h3>Educación</h3>
+                <p>2014 - Ingreso al colegio Integrado de Soacha</p>
+                <p>2023 - Ingreso a la universidad</p>
+            </div>
+        </div>
+    </section>  
+    <section id="contenido">
+        <hr>
+        <h2><center>Programas mas usados</center></h2>
         <div class="lenguajes">
             <div class="lenguaje">
                 <img src="../Img/html.jpg" alt="Html" class="lenguaje-photo">
@@ -88,22 +98,63 @@
                 </div>
             </div>
         </div>
-        <h2>Proyectos</h2>
-        <div class="proyectos">
-            <div class="proyecto">
-                <img src="../Img/proyecto1.jpg" alt="Proyecto 1" class="proyecto-photo">
-                <p>Este es un proyecto de una pagina web que hice en el primer semestre de la universidad, la hice con html y css.</p>
-            </div>
-            <div class="proyecto">
-                <img src="../Img/proyecto2.jpg" alt="Proyecto 2" class="proyecto-photo">
-                <p>Este es un proyecto de una pagina web que hice en el segundo semestre de la universidad, la hice con html, css y javascript.</p>
-            </div>
-            <div class="proyecto">
-                <img src="../Img/proyecto3.jpg" alt="Proyecto 3" class="proyecto-photo">
-                <p>Este es un proyecto de una pagina web que hice en el tercer semestre de la universidad, la hice con html, css, javascript y php.</p>
+    </section>
+    <hr>
+    <h2><center>Mis Trabajos</center></h2>
+    <section id="Proyectos" class="proyectos">
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Pagina-WEB-Manillas-" target="_blank">
+                <img src="../Img/Manillas.PNG" alt="Proyecto 1">
+            </a>
+            <h3>Pagina WEB Manillas</h3>
+            <p>Un sitio web diseñado para la venta de manillas artesanales.</p>
+            <div class="creator-container">
+                <a href="https://github.com/Garhes" class="social"><img src="../Img/s1.jpg" alt="" class="creator-photo"></a>
             </div>
         </div>
-    </section>
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Pagina-Dispositivos" target="_blank">
+                <img src="../Img/Dispositivos.PNG" alt="Proyecto 2">
+            </a>
+            <h3>Pagina WEB Dispositivos</h3>
+            <p>Catálogo digital de dispositivos electrónicos con detalles técnicos.</p>
+            <div class="creator-container">
+                <a href="https://github.com/Garhes" class="social"><img src="../Img/s1.jpg" alt="" class="creator-photo"></a>
+            </div>
+        </div>
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Pagina-Receta" target="_blank">
+                <img src="../Img/Natilla.PNG" alt="Proyecto 3">
+            </a>
+            <h3>Pagina WEB Receta</h3>
+            <p>Una web interactiva con recetas paso a paso y fotos atractivas.</p>
+            <div class="creator-container">
+                <a href="https://github.com/Garhes" class="social"><img src="../Img/s1.jpg" alt="" class="creator-photo"></a>
+            </div>
+        </div>
+    </section>  
+    <hr>
+    <h2><center>Cursos</center></h2>
+    <section id="Cursos" class="proyectos">
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Calculadora-X-Y" target="_blank">
+                <img src="../Img/javascript.png" alt="Proyecto 1">
+            </a>
+            <h3>Java Script</h3>
+        </div>
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Curso-Py" target="_blank">
+                <img src="../Img/py.jfif" alt="Proyecto 2">
+            </a>
+            <h3>Python</h3>
+        </div>
+        <div class="proyecto">
+            <a href="https://github.com/Garhes/Solidity-Curso" target="_blank">
+                <img src="../Img/solidity.png" alt="Proyecto 3">
+            </a>
+            <h3>Solidity</h3>
+        </div>
+    </section>  
     <footer>
         <hr>
         <div class="creator-container">
@@ -115,5 +166,6 @@
         <hr>
     </footer>
     <script src="../js/carga.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
